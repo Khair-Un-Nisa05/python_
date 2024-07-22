@@ -1,34 +1,57 @@
 #QUESTION NO 1
+studentname = (input("enter your name:"))
 marks = int(input("enter student marks:"))
 
-if(marks >= 70):
+if(marks >= 90 ):
     grade =" A"
-elif(marks >= 60):
+elif(marks >= 70):
     grade =" B"
-elif(marks >= 50):
+elif(marks >= 60):
     grade= "C"
-else:
+elif(marks >= 50):
     grade = "D"
-print("grade of the student->",grade)
+else:
+    grade = "F"
+print("Marksheet:")
+print("grade of the student:",grade)
 
 #QUESTION NO 2
 year = int(input("enter a year:"))
-if(year % 4 == 0 ):
-    (year % 400 == 0)
-    print (year, "is a leap year")
 
-elif(year % 100 != 0):
+if(year % 4 == 0 ) and (year % 100 == 0):
+    print (year, "is a leap year")
+elif (year % 4 == 0) or (year % 100!= 0):
+    print(year, "is a leap year")
+else:
      print(year,"is not leap year")
 
      #question no 3
-celsius= int(input("enter temperature in celsius:"))
-f= celsius *(9/5)+32
-print ("fahrenheit",f)
+unit = input("enter your choice(C,F,K)")
+temp =float(input("enter temperature:"))
 
-f=int(input("enter a temperature in fahrenhheit:"))
-c = 9/5(f-32)
-print("celsius",f)
+if unit =="C":
+    result = (9/5)*temp+32
+    print(f"{temp}C is equal to{result} F")
+elif unit == "F":
+    result = temp +273.15
+    print(f"{temp}C is equal {result}k")
+elif unit == "K":
+    result = (5/9)*temp -32
+    print(f"{temp}F is equal to {result}C")
+else:
+    print("invalid unit")
 
-c = int(input("enter a temperature in celsius: "))
-k = c+ 273.15
-print("kelvin", c)
+#QUESTION NO 4
+
+a = int(input("enter the length:"))
+b =int(input("enter the length:"))
+c =int(input("enter the length:"))
+
+if a == b == c:
+    print("Equilateral Triangle")
+elif a== b or b == c or c == a:
+    print("Isosceles Triangle")
+else:
+    print("Scalene triangle")
+
+
